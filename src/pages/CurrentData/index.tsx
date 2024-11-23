@@ -2,6 +2,7 @@ import { onValue, ref } from "firebase/database";
 import { database } from "../../service/firebase.services";
 import { useEffect, useState } from "react";
 import { IUR3eData } from "../../interfaces/data.interfaces";
+import NavBar from "../../components/NavBar";
 
 export default function CurrentData() {
 
@@ -17,7 +18,7 @@ export default function CurrentData() {
 
     return(
         <>
-            
+            <NavBar/>
         </>
     )
 }
