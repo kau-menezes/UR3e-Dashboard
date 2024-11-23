@@ -19,6 +19,24 @@ export default function CurrentData() {
     return(
         <>
             <NavBar/>
+
+            <div className="bg-[#AAB5C9] h-screen">
+                <div className="w-[95%] max-w-[1000px]  m-auto flex flex-col justify-between py-20">
+
+                    <div className="flex flex-wrap w-full justify-between gap-4 font-semibold select-none">
+                        <h3 className="text-3xl bg-white px-5 py-2 uppercase rounded-md text-main transition-transform hover:scale-110">
+                            {data ? "Connection Established" : "Connecting..."}
+                        </h3>
+                        <h3 className="text-3xl bg-white px-5 py-2 uppercase rounded-md text-main transition-transform hover:scale-110">
+                            Robot Status: 
+                                <span className={data?.status ? "text-green-500" : "text-red-500"}>
+                                    {data?.status ? " ACTIVE" : " INACTIVE"}
+                                </span>
+                        </h3>
+                    </div>
+
+                </div>
+            </div>
         </>
     )
 }
