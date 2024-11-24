@@ -3,7 +3,7 @@ import { Routes } from "../../constants/routes";
 
 export default function NavBar() {
     return (
-        <div className="bg-white fixed shadow-2xl p-4 flex justify-between bottom-8 left-0 right-0 w-max m-auto rounded-full md:top-0 md:left-0 md:h-screen md:flex-col md:rounded-none md:bottom-0 md:m-0">
+        <div className="bg-white fixed shadow-2xl p-4 flex justify-between bottom-8 left-0 right-0 w-max m-auto rounded-full md:top-0 md:left-0 md:h-screen md:flex-col md:rounded-none md:bottom-0 md:m-0 z-50">
             <img src="/logo.svg" alt="Logo" className="h-12 hidden md:block" />
             <div className="flex gap-5 w-max md:flex-col">
                 <AppLink 
