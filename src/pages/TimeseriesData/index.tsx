@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 import { onValue, ref } from "firebase/database";
 import { database } from "../../service/firebase.services";
-import TemperatureBall from '../CurrentData/components/DataBall';
+// import TemperatureBall from '../CurrentData/components/DataBall';
 import { IUR3eData } from '../../interfaces/data.interfaces';
 import { IDataGraph } from '../../interfaces/graph.interfaces';
 
@@ -23,8 +23,9 @@ import { IDataGraph } from '../../interfaces/graph.interfaces';
             setData(query.data); // Updates the state asynchronously
             
             // Use query.data directly instead of data
-            const updated = query.data.map((element: any) => ({
+            const updated = data.map((element: any) => ({
                 temperature: element.temperatures,
+                timestamp: element.timestamp
             }));
             
             console.log(updated); // Logs the transformed array of temperatures
@@ -37,6 +38,7 @@ import { IDataGraph } from '../../interfaces/graph.interfaces';
                 wrist1: item.temperature[3],
                 wrist2: item.temperature[4],
                 wrist3: item.temperature[5],
+                name: item.timestamp
             }));
 
             setDataGraph(updatedFinal)

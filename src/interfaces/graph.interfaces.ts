@@ -5,4 +5,5 @@ export interface IDataGraph{
     wrist1: number
     wrist2: number
     wrist3: number
+    name: string
 }
