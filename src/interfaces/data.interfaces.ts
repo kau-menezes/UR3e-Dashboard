@@ -1,5 +1,5 @@
 export interface IUR3eData {
-    status: boolean
+    status: number
 
     tcp_pose: number[]
     temperatures: number[]
